@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="33m-bG-32Y">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="33m-bG-32Y">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,14 +19,62 @@
                         <viewControllerLayoutGuide type="bottom" id="Rkb-O3-rip"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xKS-yl-l6T">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFZ-Gw-l4u">
+                                <rect key="frame" x="203.66666666666666" y="610" width="7" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incorrect Guesses: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YfO-zg-hHa">
+                                <rect key="frame" x="140.66666666666669" y="633" width="133.00000000000006" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Guess Here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jrT-mn-qlC">
+                                <rect key="frame" x="140.66666666666669" y="656" width="134.00000000000006" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvK-kA-YL5">
+                                <rect key="frame" x="185.66666666666666" y="686" width="43" height="30"/>
+                                <state key="normal" title="Guess"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangman1" translatesAutoresizingMaskIntoConstraints="NO" id="FFD-0u-bwy">
+                                <rect key="frame" x="107" y="20" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="FFD-0u-bwy" secondAttribute="height" multiplier="1:1" id="G9H-8X-cuq"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YfO-zg-hHa" firstAttribute="top" secondItem="bFZ-Gw-l4u" secondAttribute="bottom" constant="5" id="8kZ-u2-yxQ"/>
+                            <constraint firstItem="xvK-kA-YL5" firstAttribute="top" secondItem="jrT-mn-qlC" secondAttribute="bottom" id="8p0-On-AG2"/>
+                            <constraint firstItem="bFZ-Gw-l4u" firstAttribute="centerX" secondItem="YfO-zg-hHa" secondAttribute="centerX" id="DDZ-ZH-Lp8"/>
+                            <constraint firstItem="xvK-kA-YL5" firstAttribute="centerX" secondItem="xKS-yl-l6T" secondAttribute="centerX" id="FFI-Pb-lXU"/>
+                            <constraint firstItem="FFD-0u-bwy" firstAttribute="centerX" secondItem="xKS-yl-l6T" secondAttribute="centerX" id="IzO-yf-Bo9"/>
+                            <constraint firstItem="YfO-zg-hHa" firstAttribute="centerX" secondItem="jrT-mn-qlC" secondAttribute="centerX" id="Mmd-T5-kzd"/>
+                            <constraint firstItem="jrT-mn-qlC" firstAttribute="top" secondItem="YfO-zg-hHa" secondAttribute="bottom" constant="5" id="Qgf-6t-ZQD"/>
+                            <constraint firstItem="Rkb-O3-rip" firstAttribute="top" secondItem="xvK-kA-YL5" secondAttribute="bottom" constant="20" id="hsa-xN-eCb"/>
+                            <constraint firstItem="jrT-mn-qlC" firstAttribute="centerX" secondItem="xvK-kA-YL5" secondAttribute="centerX" id="lax-va-k8a"/>
+                            <constraint firstItem="FFD-0u-bwy" firstAttribute="top" secondItem="fga-sG-nzY" secondAttribute="bottom" id="ymY-D6-R0c"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="updateWord" destination="bFZ-Gw-l4u" id="1zi-5f-bEe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJo-zA-LYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="652" y="-133.5832083958021"/>
+            <point key="canvasLocation" x="648.75" y="-138.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hangman1" width="200" height="200"/>
+    </resources>
 </document>

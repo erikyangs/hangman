@@ -35,4 +35,6 @@ class HangmanViewController: UIViewController {
     }
     */
 
+    @IBOutlet weak var updateWord: UILabel!
+    
 }
