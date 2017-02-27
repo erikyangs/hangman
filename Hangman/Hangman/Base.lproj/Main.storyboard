@@ -43,6 +43,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvK-kA-YL5">
                                 <rect key="frame" x="185.66666666666666" y="686" width="43" height="30"/>
                                 <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="pressGuessButton:" destination="33m-bG-32Y" eventType="touchUpInside" id="qPY-cb-npm"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hangman1" translatesAutoresizingMaskIntoConstraints="NO" id="FFD-0u-bwy">
                                 <rect key="frame" x="107" y="20" width="200" height="200"/>
@@ -66,7 +69,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="updateWord" destination="bFZ-Gw-l4u" id="1zi-5f-bEe"/>
+                        <outlet property="guessTextField" destination="jrT-mn-qlC" id="D5h-mE-lLe"/>
+                        <outlet property="wordLabel" destination="bFZ-Gw-l4u" id="ps2-5s-2e8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJo-zA-LYW" userLabel="First Responder" sceneMemberID="firstResponder"/>
