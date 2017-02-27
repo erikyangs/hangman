@@ -70,6 +70,8 @@
                     </view>
                     <connections>
                         <outlet property="guessTextField" destination="jrT-mn-qlC" id="D5h-mE-lLe"/>
+                        <outlet property="hangmanImage" destination="FFD-0u-bwy" id="wxM-wk-6Lh"/>
+                        <outlet property="incorrectGuessesLabel" destination="YfO-zg-hHa" id="5UK-Eu-6ZZ"/>
                         <outlet property="wordLabel" destination="bFZ-Gw-l4u" id="ps2-5s-2e8"/>
                     </connections>
                 </viewController>
