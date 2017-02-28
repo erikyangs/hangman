@@ -20,8 +20,3 @@ An iOS application for the Hangman game. Users should be able to start a game, m
 - A win state, indicated by an Alert (Pop up box). This should prevent additional guesses
 - A fail state, indicated by an Alert (Pop up box). This should prevent additional guesses
 - A "Start Over" button, which starts a new game
-
-### Optional Additions / Features ###
-* A smart way for the user to guess letters (since a TextField for letter entry isn't ideal UX).
-* Customized design, including, but not limited to, custom images for the Hangman states
-* Anything else that you think will impress us or you think would be fun to implement!
